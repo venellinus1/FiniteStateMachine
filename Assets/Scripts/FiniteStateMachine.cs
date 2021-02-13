@@ -9,7 +9,7 @@ public class FiniteStateMachine //: MonoBehaviour
         the FSM is based on Mat Buckland's
         changes are made to make it event driven with FSM Update method called only on button press
     */
-    public IState currentState;//!!!!!!!! remove public
+    IState currentState;
 
     public void ChangeState(IState newState)
     {
@@ -22,7 +22,6 @@ public class FiniteStateMachine //: MonoBehaviour
 
     public void Update()
     {
-        if (currentState != null) currentState.Execute();
-        //print("currentState " + currentState);
+        if (currentState != null) currentState.Execute();        
     }
 }
